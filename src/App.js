@@ -1,4 +1,6 @@
 import "./App.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import GlobalStyle from "./style/GlobalStyle";
 import { Outlet } from "react-router-dom";
 /*
@@ -14,8 +16,9 @@ outlet
 function App() {
   return (
     <>
-      <GlobalStyle />
+      <Header />
       <Outlet />
+      <Footer />
     </>
   );
 }

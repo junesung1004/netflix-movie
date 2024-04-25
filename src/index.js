@@ -6,11 +6,16 @@ import reportWebVitals from "./reportWebVitals";
 import GlobalStyle from "./style/GlobalStyle";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./pages/Router";
+import { QueryClient, QueryClientProvider } from "react-query";
 
+const queryClient = new QueryClient(); //새로운 쿼리 클라이언트를 생성
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <Router />
+    <QueryClientProvider client={queryClient}>
+      <GlobalStyle />
+      <Router />
+    </QueryClientProvider>
   </>
 );
 

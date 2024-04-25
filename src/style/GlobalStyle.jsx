@@ -1,4 +1,4 @@
-const { createGlobalStyle } = require("styled-components");
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 /* v2.0 | 20110126
@@ -54,6 +54,18 @@ a{
 img{
 	display: block;
 	width: 100%;
+}
+
+button {
+	outline : none;
+	border : none;
+	background-color: transparent;
+	padding: 0;
+	cursor: pointer;
+}
+
+body,html {
+	background-color : #000;
 }
 
 `;

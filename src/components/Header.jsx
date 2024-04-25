@@ -30,10 +30,14 @@ const HeaderContainer = styled.header`
   display: flex;
   box-sizing: border-box;
   background-color: black;
+  padding: 10px;
   width: 100%;
   gap: 60px;
+  z-index: 20;
   .logo {
+    display: flex;
     font-size: 30px;
+    margin-left: 30px;
     a {
       display: flex;
       align-items: center;
