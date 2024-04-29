@@ -1,7 +1,7 @@
-import { createGlobalStyle } from "styled-components";
+import  { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-/* v2.0 | 20110126
+    /* v2.0 | 20110126
   http://meyerweb.com/eric/tools/css/reset/ 
   License: none (public domain)
 */
@@ -56,18 +56,18 @@ img{
 	width: 100%;
 }
 
-button {
+button{
 	outline : none;
 	border : none;
-	background-color: transparent;
-	padding: 0;
+	background: transparent;
+	padding: 0px;
 	cursor: pointer;
 }
 
-body,html {
-	background-color : #000;
+body,html{
+	background-color: #000;
 }
 
-`;
 
-export default GlobalStyle;
+`
+export default GlobalStyle
