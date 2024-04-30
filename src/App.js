@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-import Main from './pages/Mian';
-import GlobalStyle from './style/GlobalStyle';
-import { Outlet } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import logo from "./logo.svg";
+import "./App.css";
+import Main from "./pages/Mian";
+import GlobalStyle from "./style/GlobalStyle";
+import { Outlet, useLocation } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 /*
 outlet
 리액트 라우터에서 계층 구조에서 현재 활성화되고 있는 라우트를 랜더링하는 hook
@@ -16,12 +16,20 @@ outlet
 */
 
 function App() {
+  const { pathname } = useLocation();
+  const isIntro = pathname === "/";
   return (
-      <>
-      <Header/>
-      <Outlet/>
-      <Footer/>
-      </>
+    <>
+      {isIntro ? (
+        <Outlet />
+      ) : (
+        <>
+          <Header />
+          <Outlet />
+          <Footer />
+        </>
+      )}
+    </>
   );
 }
 
